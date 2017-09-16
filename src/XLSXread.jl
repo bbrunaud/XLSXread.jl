@@ -1,3 +1,5 @@
+__precompile__()
+
 module XLSXread
 
 using EzXML
@@ -62,9 +64,15 @@ function readxlsx(file::String,sheetlist::Array{Int64,1})
       end
     end
 
-    ## TODO support more than 27 columns
     # Get range info
-    abc = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
+    ABC = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
+    abc = [string(s) for s in ABC]
+    for i in ABC
+        for j in ABC
+           push!(abc,"$i$j")
+        end
+    end
+
     mincol = 1000
     maxcol = 0
     minrow = 1000000

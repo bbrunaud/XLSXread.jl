@@ -1,5 +1,5 @@
 # XLSXread.jl
-Excel file reader for julia based on EzXML and ZipFile. It can read a single sheet or multple sheets at a time. Returns a dictionary with DataFrames with the sheet number as the key
+Fast Excel file reader for julia based on [EzXML](https://github.com/bicycle1885/EzXML.jl) and [ZipFile](http://zipfilejl.readthedocs.io/en/latest/). It can read a single sheet or multple sheets at a time. Returns a dictionary with DataFrames with the sheet number as the key
 
 ## Usage
 ```julia
